@@ -1,0 +1,57 @@
+temperature-map: &temperature-map
+  dimensions: 2
+  type: CONSTANT
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *temperature-map
+
+    default-from: deep-ocean
+    default-to:
+      - deep-ocean-temperate: 1
+
+    to:
+
+      ocean:
+        - ocean-temperate: 1
+
+      coast-flat:
+        - coast-flat-temperate: 1
+
+      coast-hills-small:
+        - coast-hills-small-temperate: 1
+
+      coast-hills-large:
+        - coast-hills-large-temperate: 1
+
+      coast-mountains-small:
+        - coast-mountains-small-temperate: 1
+
+      coast-mountains-large:
+        - coast-mountains-large-temperate: 1
+
+      flat:
+        - AUTUMNAL_FLATS: 1
+        - BIRCH_FLATS: 1
+        - FLOWERING_FLATS: 1
+        - PLAINS: 1
+        - FOREST_FLATS: 1
+
+      hills-small:
+        - AUTUMNAL_FOREST: 1
+        - BIRCH_FOREST: 1
+        - FLOWERING_FOREST: 1
+        - FOREST: 1
+
+      hills-large:
+        - AUTUMNAL_FOREST_HILLS: 1
+        - BIRCH_FOREST_HILLS: 1
+        - FLOWERING_AUTUMNAL_FOREST_HILLS: 1
+        - FLOWERING_FOREST_HILLS: 1
+        - FOREST_HILLS: 1
+
+      mountains-small:
+        - SAKURA_MOUNTAINS: 1
+
+      mountains-large:
+        - SAKURA_MOUNTAINS: 1 # replace with actually large mountains?

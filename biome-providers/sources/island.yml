@@ -1,0 +1,46 @@
+source:
+  type: SAMPLER
+  biomes:
+    # - deep-ocean: 1
+    # - land: 1
+    - deep-ocean: 28
+    - deep-ocean-border: 4 # Used for the border of deep ocean island biomes crossing into regular ocean
+    - ocean: 16
+    - coast: 4 # Used for the border of land biomes crossing into ocean
+    - land: 32
+  sampler:
+    dimensions: 2
+    type: DOMAIN_WARP
+    amplitude: 2
+    warp:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.007
+    sampler:
+      type: EXPRESSION
+      expression: |
+        if(x < -outerRadius || x > outerRadius || z < -outerRadius || z > outerRadius,
+          -1,
+          herp(sqrt(x*x+z*z), innerRadius, 1, outerRadius, -1)
+        )
+      variables:
+        innerRadius: 6
+        outerRadius: 8
+      functions: $math/functions/herp.yml:functions
+
+    # type: IMAGE
+    # image: images/gradient.png
+    # channel: GRAYSCALE
+    # frequency: 1
+    # type: OPEN_SIMPLEX_2
+    # frequency: 0.02
+    # salt: 0
+    # type: SUB
+    # left:
+    #   type: OPEN_SIMPLEX_2
+    #   frequency: 0.02
+    #   salt: 0
+    # right:
+    #   type: IMAGE
+    #   image: images/square_gradient.png
+    #   channel: GRAYSCALE
+    #   frequency: 1

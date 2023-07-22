@@ -1,0 +1,54 @@
+temperature-map: &temperature-map
+  dimensions: 2
+  type: CONSTANT
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *temperature-map
+
+    default-from: deep-ocean
+    default-to:
+      - deep-ocean-temperate: 1
+
+    to:
+
+      ocean:
+        - ocean-temperate: 1
+
+      coast-flat:
+        - MUSHROOM_COAST: 1
+        - ROCKY_WETLANDS: 2
+
+      coast-hills-small:
+        - MUSHROOM_COAST: 1
+        - ROCKY_WETLANDS: 2
+
+      coast-hills-large:
+        - MUSHROOM_COAST: 1
+        - ROCKY_WETLANDS: 2
+
+      coast-mountains-small:
+        - MUSHROOM_COAST: 1
+        - ROCKY_WETLANDS: 2
+
+      coast-mountains-large:
+        - MUSHROOM_COAST: 1
+        - ROCKY_WETLANDS: 2
+
+      flat:
+        - MUSHROOM_FIELDS: 1
+        - ROCKY_WETLANDS: 1
+
+      hills-small:
+        - MUSHROOM_HILLS: 1
+        - MUSHROOM_FIELDS: 1
+
+      hills-large:
+        - MUSHROOM_HILLS: 1
+
+      mountains-small:
+        - MUSHROOM_HILLS: 1
+        - MUSHROOM_MOUNTAINS: 1
+
+      mountains-large:
+        - MUSHROOM_MOUNTAINS: 1

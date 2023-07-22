@@ -1,0 +1,57 @@
+temperature-map: &temperature-map
+  dimensions: 2
+  type: CONSTANT
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *temperature-map
+
+    default-from: deep-ocean
+    default-to:
+      - deep-ocean-tropical: 1
+
+    to:
+
+      ocean:
+        - ocean-tropical: 1
+
+      coast-flat:
+        - coast-flat-tropical: 1
+
+      coast-hills-small:
+        - coast-hills-small-tropical: 1
+
+      coast-hills-large:
+        - coast-hills-large-tropical: 1
+
+      coast-mountains-small:
+        - coast-mountains-small-tropical: 1
+
+      coast-mountains-large:
+        - coast-mountains-large-tropical: 1
+
+      flat:
+        - BAMBOO_JUNGLE_FLATS: 1
+        - BAMBOO_PONDS: 1
+        - JUNGLE_FLATS: 1
+        - PALM_FOREST: 1
+
+      hills-small:
+        - BAMBOO_JUNGLE: 1
+        - JUNGLE: 1
+        - RAINFOREST: 2
+
+      hills-large:
+        - BAMBOO_JUNGLE_HILLS: 1
+        - JUNGLE_HILLS: 1
+        - RAINFOREST_HILLS: 1
+
+      mountains-small:
+        - DRY_ROCKY_BUMPY_MOUNTAINS: 1
+        - MONSOON_MOUNTAINS: 1
+        - ROCKY_BUMPY_MOUNTAINS: 1
+
+      mountains-large:
+        - BAMBOO_JUNGLE_MOUNTAINS: 1
+        - JUNGLE_MOUNTAINS: 1
+        - LARGE_MONSOON_MOUNTAINS: 1

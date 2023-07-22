@@ -1,0 +1,50 @@
+temperature-map: &temperature-map
+  dimensions: 2
+  type: CONSTANT
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *temperature-map
+
+    default-from: deep-ocean
+    default-to:
+      - deep-ocean-temperate: 1
+
+    to:
+
+      ocean:
+        - ocean-temperate: 1
+
+      coast-flat:
+        - PLAINS: 1
+        - BEACH: 2
+
+      coast-hills-small:
+        - PLAINS: 1
+        - PRAIRIE: 2
+
+      coast-hills-large:
+        - MUSHROOM_COAST: 1
+        - ROCKY_WETLANDS: 2
+
+      coast-mountains-small:
+        - FOREST_FLATS: 1
+
+      coast-mountains-large:
+        - FOREST_HILLS: 1
+
+      flat:
+        - PLAINS: 1
+        - PRAIRIE: 1
+
+      hills-small:
+        - FOREST_FLATS: 1
+
+      hills-large:
+        - FOREST_FLATS: 1
+
+      mountains-small:
+        - FOREST_FLATS: 1
+
+      mountains-large:
+        - FOREST_HILLS: 1
