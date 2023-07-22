@@ -41,17 +41,18 @@ stages:
       hills-small:
         # - DARK_FOREST: 1
         - FOREST: 1
-        - WOODED_BUTTES: 1
+        - PLAINS: 1
+        - FOREST_FLATS: 1
 
       hills-large:
-        - SHRUBLAND: 1
-        # - DARK_FOREST_HILLS: 1
-        - FOREST_HILLS: 1
+        - FOREST: 1
+        - FOREST_FLATS: 1
 
       mountains-small:
+        - WOODED_BUTTES: 1
         - HIGHLANDS: 1
         # - TEMPERATE_MOUNTAINS_RIVER: 1
-        - TEMPERATE_MOUNTAINS: 1
+        # - TEMPERATE_MOUNTAINS: 1
 
       mountains-large:
         # - DRY_TEMPERATE_MOUNTAINS_RIVER: 1

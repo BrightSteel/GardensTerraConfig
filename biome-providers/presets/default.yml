@@ -101,11 +101,11 @@ biomes:
         #- TODO
         # ---
 
-        - << biome-providers/stages/distribute_biomes_floral.yml:stages
+        # - << biome-providers/stages/distribute_biomes_floral.yml:stages
         # - << biome-providers/stages/distribute_biomes_cold.yml:stages
         # - << biome-providers/stages/distribute_temperature_zones_tropical.yml:stages
         # - << biome-providers/stages/distribute_biomes_tropical.yml:stages
-        # - << biome-providers/stages/distribute_biomes_lush.yml:stages
+        - << biome-providers/stages/distribute_biomes_lush.yml:stages
         # - << biome-providers/stages/distribute_biomes_mushroom.yml:stages
         # - << biome-providers/stages/distribute_biomes_plains.yml:stages
 
