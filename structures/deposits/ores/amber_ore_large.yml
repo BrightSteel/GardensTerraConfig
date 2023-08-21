@@ -1,0 +1,5 @@
+id: AMBER_ORE_LARGE
+type: ORE
+extends: AMBER_ORE
+
+size: 12

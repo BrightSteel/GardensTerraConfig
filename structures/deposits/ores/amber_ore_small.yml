@@ -1,0 +1,5 @@
+id: AMBER_ORE_SMALL
+type: ORE
+extends: AMBER_ORE
+
+size: 4

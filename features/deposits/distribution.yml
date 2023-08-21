@@ -50,6 +50,13 @@ diamond:
     min: -144
     max: 16
 
+amber:
+  averageCountPerChunk: 6
+  salt: 1094
+  range:
+    min: -144
+    max: 16
+
 iron:
   averageCountPerChunk: 10
   salt: 6921

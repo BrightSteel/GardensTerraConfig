@@ -1,0 +1,12 @@
+id: AMBER_ORE
+type: ORE
+extends: ABSTRACT_ORE
+
+material: "minecraft:note_block[instrument=cow_bell,note=3,powered=false]"
+
+material-overrides:
+  minecraft:deepslate: "minecraft:note_block[instrument=cow_bell,note=5,powered=false]"
+
+size: 8
+
+exposed: 0.2
